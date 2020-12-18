@@ -39,7 +39,6 @@ var generateCmd = &cobra.Command{
 	Long: `This command will use the input of languages provided and generate a .gitignore file based on that at your current location.
 	The path of where to store the .gitignore file can be overridden by passing the argument for -p, --path.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("generate called")
 		validateInput(languageInput)
 		languageString := strings.Join(languageInput, ",")
 		downloadIgoreFile(outputPath + ".gitignore", "https://gitignore.io/api/" + languageString)

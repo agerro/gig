@@ -69,7 +69,7 @@ func verifyConfigDirExistsElseCreate(dirPath string){
 // write as it downloads and not load the whole file into memory.
 func downloadFile(filepath string, url string) error {
 
-	fmt.Println("Attmpeting to download new language definitions")
+	fmt.Println("Attempting to download new language definitions")
 
 	// Get the data
     resp, err := http.Get(url)
